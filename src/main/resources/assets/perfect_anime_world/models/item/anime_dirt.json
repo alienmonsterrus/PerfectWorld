@@ -1,0 +1,6 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "perfect_anime_world:blocks/anime_dirt"
+	}
+}
