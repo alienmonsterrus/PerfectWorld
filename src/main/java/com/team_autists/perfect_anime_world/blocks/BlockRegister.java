@@ -12,11 +12,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class BlockRegister {
 
 	public final static List<Block> BLOCKS = new ArrayList<>();
 
 	public final static Block ANIME_STONE = new AnimeStone("anime_stone");
+	public final static Block ANIME_DIRT = new AnimeDirt("anime_dirt");
 
 	public static void register() {
 		for (Block block : BLOCKS) {

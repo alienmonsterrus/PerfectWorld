@@ -1,5 +1,6 @@
 package com.team_autists.perfect_anime_world.blocks;
 
+import com.team_autists.perfect_anime_world.Main;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -12,7 +13,9 @@ public class BlockBase extends Block {
 		this.setSoundType(soundType);
 		this.setRegistryName(name);
 		this.setUnlocalizedName(name);
-		this.setCreativeTab(CreativeTabs.REDSTONE);
+		this.setCreativeTab(Main.CREATIVE_TAB);
+
+		// Добавляем блок в лист для последующей автоматической регистрации.
 		BlockRegister.BLOCKS.add(this);
 	}
 
