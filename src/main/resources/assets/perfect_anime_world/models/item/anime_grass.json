@@ -1,0 +1,7 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"up": "perfect_anime_world:blocks/anime_grass_top",
+		"all": "perfect_anime_world:blocks/anime_grass"
+	}
+}

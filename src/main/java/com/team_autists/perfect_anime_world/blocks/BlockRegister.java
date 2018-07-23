@@ -19,6 +19,7 @@ public class BlockRegister {
 
 	public final static Block ANIME_STONE = new AnimeStone("anime_stone");
 	public final static Block ANIME_DIRT = new AnimeDirt("anime_dirt");
+	public final static Block ANIME_GRASS = new AnimeGrass("anime_grass");
 
 	public static void register() {
 		for (Block block : BLOCKS) {
