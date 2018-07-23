@@ -3,6 +3,6 @@
 	"textures": {
 		"all": "perfect_anime_world:blocks/anime_grass",
 		"up": "perfect_anime_world:blocks/anime_grass_top",
-		"bottom": "perfect_anime_world:blocks/anime_dirt"
+		"down": "perfect_anime_world:blocks/anime_dirt"
 	}
 }
