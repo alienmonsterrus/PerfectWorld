@@ -15,6 +15,8 @@ public class ItemRegister {
 
 	public static final UselessItem USELESS_ITEM = new UselessItem("useless_item");
 
+	public static final AnimeIronIngot ANIME_IRON_INGOT = new AnimeIronIngot("anime_iron_ingot");
+
 	public static void register() {
 		for (Item item : ITEMS) {
 			setRegister(item);
