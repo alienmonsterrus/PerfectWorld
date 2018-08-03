@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " L ",
+    " L ",
+    " D "
+  ],
+  "key": {
+    "L": {
+      "item": "prefect_anime_world:anime_iron_ingot"
+    },
+    "D": {
+      "item": "minecraft:wool",
+      "data": 2
+    }
+  },
+  "result": {
+    "item": "perfect_anime_world:key",
+    "count": 5
+  }
+}

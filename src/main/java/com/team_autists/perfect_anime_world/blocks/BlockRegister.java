@@ -6,6 +6,7 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -21,6 +22,7 @@ public class BlockRegister {
 	public final static Block ANIME_DIRT = new AnimeDirt("anime_dirt");
 	public final static Block ANIME_GRASS = new AnimeGrass("anime_grass");
 	public final static Block ANIME_IRON_ORE = new AnimeIronOre("anime_iron_ore");
+	
 
 	public static void register() {
 		for (Block block : BLOCKS) {
