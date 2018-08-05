@@ -2,6 +2,7 @@ package com.team_autists.perfect_anime_world.proxy;
 
 import com.team_autists.perfect_anime_world.blocks.BlockRegister;
 import com.team_autists.perfect_anime_world.item.ItemRegister;
+import com.team_autists.perfect_anime_world.item.SmeltingRecipes;
 import com.team_autists.perfect_anime_world.world.generators.GeneratorsRegister;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -13,6 +14,7 @@ public class CommonProxy {
 		BlockRegister.register();
 		ItemRegister.register();
 		GeneratorsRegister.register();
+		SmeltingRecipes.init();
 	}
 
 	public void init(FMLInitializationEvent event) {
