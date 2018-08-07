@@ -10,9 +10,12 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 public class BiomeRegister {
 	public static final Biome LIBRARY_DIMENSION = new BiomeLibrary();
+	public static final Biome OVERWORLD_FLAT_BIOME = new OverworldFlatBiome();
 
 	public static void register() {
 		initBiome(LIBRARY_DIMENSION, "Library", BiomeType.WARM, Type.COLD);
+		initBiome(OVERWORLD_FLAT_BIOME, "OverworldFlat", BiomeType.WARM,
+				Type.BEACH, Type.DRY, Type.HILLS);
 	}
 
 	private static Biome initBiome(Biome biome, String name, BiomeType biomeType, Type... types) {
@@ -20,7 +23,7 @@ public class BiomeRegister {
 		ForgeRegistries.BIOMES.register(biome);
 		System.out.print("Biome register");
 		BiomeDictionary.addTypes(biome, types);
-		BiomeManager.addBiome(biomeType, new BiomeEntry(biome, 80));
+		BiomeManager.addBiome(biomeType, new BiomeEntry(biome, 10));
 		BiomeManager.addSpawnBiome(biome);
 		return biome;
 	}

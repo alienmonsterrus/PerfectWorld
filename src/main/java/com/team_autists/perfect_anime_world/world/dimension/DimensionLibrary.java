@@ -1,10 +1,8 @@
 package com.team_autists.perfect_anime_world.world.dimension;
 
 import com.team_autists.perfect_anime_world.world.biomes.BiomeRegister;
-import net.minecraft.client.Minecraft;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.WorldProvider;
-import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.biome.BiomeProviderSingle;
 import net.minecraft.world.gen.ChunkGeneratorFlat;
 import net.minecraft.world.gen.IChunkGenerator;
