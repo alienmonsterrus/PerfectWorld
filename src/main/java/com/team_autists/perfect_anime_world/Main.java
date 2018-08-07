@@ -1,17 +1,11 @@
 package com.team_autists.perfect_anime_world;
 
-import com.team_autists.perfect_anime_world.blocks.BlockBase;
-import com.team_autists.perfect_anime_world.item.AnimeIronIngot;
 import com.team_autists.perfect_anime_world.proxy.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.common.event.*;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, useMetadata = Reference.META_DATA)
 public class Main {
@@ -34,6 +28,11 @@ public class Main {
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		proxy.postInit(event);
+	}
+
+	@EventHandler
+	public void serverInit(FMLServerStartingEvent event) {
+		proxy.serverInit(event);
 	}
 
 }

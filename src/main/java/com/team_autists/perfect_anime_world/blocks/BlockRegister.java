@@ -22,7 +22,7 @@ public class BlockRegister {
 	public final static Block ANIME_DIRT = new AnimeDirt("anime_dirt");
 	public final static Block ANIME_GRASS = new AnimeGrass("anime_grass");
 	public final static Block ANIME_IRON_ORE = new AnimeIronOre("anime_iron_ore");
-	
+	public final static Block ANIME_TELEPORT_BLOCK = new AnimeTeleportBlock("anime_teleport_block");
 
 	public static void register() {
 		for (Block block : BLOCKS) {
