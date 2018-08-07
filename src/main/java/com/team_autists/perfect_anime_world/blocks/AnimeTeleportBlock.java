@@ -1,6 +1,6 @@
 package com.team_autists.perfect_anime_world.blocks;
 
-import com.team_autists.perfect_anime_world.commands.Teleport;
+import com.team_autists.perfect_anime_world.world.blocks_structure_manager.ThreeInRowBlockStructureFinder;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -8,6 +8,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 
 public class AnimeTeleportBlock extends BlockBase {
@@ -17,6 +18,7 @@ public class AnimeTeleportBlock extends BlockBase {
 
 	@Override
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
+		/*
 		if (!worldIn.isRemote) {
 
 			double x = playerIn.getPosition().getX();
@@ -26,7 +28,16 @@ public class AnimeTeleportBlock extends BlockBase {
 			Teleport.teleportToDimension(playerIn, 2, x, y, z);
 			return true;
 		}
+		*/
 
-		return false;
+		if (!worldIn.isRemote) {
+			if (ThreeInRowBlockStructureFinder.getInstance().findStructure(pos)) {
+				playerIn.sendMessage(new TextComponentString("TeleportBlock: FINDED!!"));
+			} else {
+				playerIn.sendMessage(new TextComponentString("TeleportBlock: None"));
+			}
+		}
+
+		return true;
 	}
 }
