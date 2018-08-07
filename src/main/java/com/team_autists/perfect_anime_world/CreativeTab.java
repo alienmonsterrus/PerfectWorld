@@ -11,6 +11,6 @@ public class CreativeTab extends CreativeTabs {
 
 	@Override
 	public ItemStack getTabIconItem() {
-		return new ItemStack(BlockRegister.ANIME_DIRT);
+		return new ItemStack(BlockRegister.ANIME_GRASS);
 	}
 }
