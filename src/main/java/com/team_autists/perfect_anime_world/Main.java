@@ -34,5 +34,4 @@ public class Main {
 	public void serverInit(FMLServerStartingEvent event) {
 		proxy.serverInit(event);
 	}
-
 }

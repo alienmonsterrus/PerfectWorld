@@ -4,6 +4,7 @@ import com.team_autists.perfect_anime_world.blocks.BlockRegister;
 import com.team_autists.perfect_anime_world.commands.CommandDimensionTeleport;
 import com.team_autists.perfect_anime_world.item.ItemRegister;
 import com.team_autists.perfect_anime_world.item.SmeltingRecipes;
+import com.team_autists.perfect_anime_world.recipes.CraftingRegister;
 import com.team_autists.perfect_anime_world.world.biomes.BiomeRegister;
 import com.team_autists.perfect_anime_world.world.dimension.DimensionRegister;
 import com.team_autists.perfect_anime_world.world.generators.GeneratorsRegister;
@@ -21,6 +22,7 @@ public class CommonProxy {
 		GeneratorsRegister.register();
 		DimensionRegister.register();
 		SmeltingRecipes.init();
+		CraftingRegister.register();
 	}
 
 	public void init(FMLInitializationEvent event) {

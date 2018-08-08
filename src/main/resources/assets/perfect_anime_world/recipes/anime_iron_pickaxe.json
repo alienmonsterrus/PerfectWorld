@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"III",
+		" W ",
+		" W "
+	],
+	"key": {
+		"I": {
+			"item": "prefect_anime_world:anime_iron_ingot"
+		},
+		"W": {
+			"item": "minecraft:wool"
+		}
+	},
+	"result": {
+		"item": "perfect_anime_world:anime_iron_pickaxe",
+		"count": 1
+	}
+}
