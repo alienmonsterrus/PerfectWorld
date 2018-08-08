@@ -17,6 +17,12 @@ public class ItemRegister {
 
 	public static final AnimeIronIngot ANIME_IRON_INGOT = new AnimeIronIngot("anime_iron_ingot");
 
+	public static final AnimeIronPickaxe ANIME_IRON_PICKAXE = new AnimeIronPickaxe("anime_iron_pickaxe", Item.ToolMaterial.IRON);
+
+	// public static final Item.ToolMaterial TOOL_ANIME_IRON = EnumHelper.addToolMaterial
+
+	//public static final AnimeShovel ANIME_SHOVEL = new AnimeShovel("anime_shovel");
+
 	public static void register() {
 		for (Item item : ITEMS) {
 			setRegister(item);

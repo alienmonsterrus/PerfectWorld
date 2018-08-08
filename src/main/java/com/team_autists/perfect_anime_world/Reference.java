@@ -8,6 +8,6 @@ public class Reference {
 	public static final String CLIENT = "com.team_autists.perfect_anime_world.proxy.ClientProxy";
 
 	public static final boolean META_DATA = true;
-	public static final boolean AUTO_JOIN_WORLD = true;
+	public static final boolean AUTO_JOIN_WORLD = false;
 	public static final int AUTO_JOIN_WORLD_INDEX = 0;
 }
