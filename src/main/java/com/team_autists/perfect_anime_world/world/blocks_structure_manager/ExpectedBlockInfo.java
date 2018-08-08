@@ -16,7 +16,7 @@ public class ExpectedBlockInfo {
 		return block;
 	}
 
-	public BlockPos getBlockPos() {
+	public BlockPos getBlockOffset() {
 		return blockPos;
 	}
 }

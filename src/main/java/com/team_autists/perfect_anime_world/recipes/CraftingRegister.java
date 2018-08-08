@@ -7,8 +7,7 @@ import net.minecraftforge.common.crafting.IRecipeFactory;
 
 public class CraftingRegister {
 	public static void register() {
-		// Даун который ничего не может сделать
-		// не смог закоммитить кирку. 120/10
+		registerRecipes("useless_item");
 		// registerRecipes("anime_iron_pickaxe");
 	}
 

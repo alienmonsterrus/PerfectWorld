@@ -19,6 +19,8 @@ public class ThreeInRowBlockStructureFinder extends BlocksStructureFinder {
 		List<ExpectedBlockInfo> blocks = new ArrayList<ExpectedBlockInfo>();
 		blocks.add(new ExpectedBlockInfo(BlockRegister.ANIME_TELEPORT_BLOCK, new BlockPos(0, 1, 0)));
 		blocks.add(new ExpectedBlockInfo(BlockRegister.ANIME_TELEPORT_BLOCK, new BlockPos(0, 2, 0)));
+		blocks.add(new ExpectedBlockInfo(BlockRegister.ANIME_TELEPORT_BLOCK, new BlockPos(1, 0, 0)));
+		blocks.add(new ExpectedBlockInfo(BlockRegister.ANIME_TELEPORT_BLOCK, new BlockPos(-1, 0, 0)));
 		return blocks;
 	}
 

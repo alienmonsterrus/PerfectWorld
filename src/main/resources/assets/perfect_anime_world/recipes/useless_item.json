@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"III",
+		"I I",
+		"III"
+	],
+	"key": {
+		"I": {
+			"item": "perfect_anime_world:anime_iron_ingot"
+		}
+	},
+	"result": {
+		"item": "perfect_anime_world:useless_item",
+		"count": 64
+	}
+}

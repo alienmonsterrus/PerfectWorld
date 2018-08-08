@@ -20,22 +20,25 @@ public class BlocksStructureFinder {
 	}
 
 	public boolean findStructure(BlockPos centerBlock) {
-		for (ExpectedBlockInfo blockInfo : offsets) {
-			BlockPos pos = blockInfo.getBlockPos();
 
-			IBlockState blockState = getBlockState(centerBlock, pos);
-			Block block = blockState.getBlock();
+		if (worldIn.getBlockState(centerBlock).getBlock() != relative) {
+			return false;
+		}
+
+		for (ExpectedBlockInfo blockInfo : offsets) {
+			BlockPos offset = blockInfo.getBlockOffset();
+
+			Block block = getBlock(centerBlock, offset);
 
 			if (blockInfo.getBlock() != block) {
 				return false;
 			}
 		}
-
 		return true;
 	}
 
-	private IBlockState getBlockState(BlockPos relative, BlockPos offset) {
-		return getBlockStateFromRelative(this.worldIn, relative, offset);
+	private Block getBlock(BlockPos relative, BlockPos offset) {
+		return getBlockStateFromRelative(this.worldIn, relative, offset).getBlock();
 	}
 
 	private IBlockState getBlockStateFromRelative(World world, BlockPos relative, BlockPos offset) {
