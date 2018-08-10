@@ -2,15 +2,15 @@
 	"type": "minecraft:crafting_shaped",
 	"pattern": [
 		"III",
-		" W ",
-		" W "
+		" S ",
+		" S "
 	],
 	"key": {
 		"I": {
-			"item": "perfect_anime_world:anime_iron_ingot"
+        	"item": "perfect_anime_world:anime_iron_ingot"
 		},
-		"W": {
-			"item": "minecraft:wool"
+		"S": {
+			"item": "minecraft:stick"
 		}
 	},
 	"result": {

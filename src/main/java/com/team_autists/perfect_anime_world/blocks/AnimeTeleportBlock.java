@@ -1,5 +1,7 @@
 package com.team_autists.perfect_anime_world.blocks;
 
+import com.team_autists.perfect_anime_world.world.blocks_structure_manager.BlockNeighborsFinder;
+import com.team_autists.perfect_anime_world.world.blocks_structure_manager.ExpectedBlockInfo;
 import com.team_autists.perfect_anime_world.world.blocks_structure_manager.ThreeInRowBlockStructureFinder;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -10,6 +12,8 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
+
+import java.util.ArrayList;
 
 public class AnimeTeleportBlock extends BlockBase {
 	public AnimeTeleportBlock(String name) {
@@ -29,7 +33,25 @@ public class AnimeTeleportBlock extends BlockBase {
 			return true;
 		}
 		*/
+		
+		if (!worldIn.isRemote) {
+			ArrayList<ExpectedBlockInfo> blocks = BlockNeighborsFinder.Find(worldIn, pos, BlockRegister.ANIME_TELEPORT_BLOCK);
 
+			for (ExpectedBlockInfo block : blocks) {
+				boolean finded = ThreeInRowBlockStructureFinder.
+						getInstance().findStructure(block.getBlockOffset());
+
+				if (finded) {
+					playerIn.sendMessage(new TextComponentString("Structure is finded"));
+					break;
+				}
+			}
+
+			playerIn.sendMessage(new TextComponentString("Count: " + String.valueOf(blocks.size())));
+
+		}
+
+		/*
 		if (!worldIn.isRemote) {
 			if (ThreeInRowBlockStructureFinder.getInstance().findStructure(pos)) {
 				playerIn.sendMessage(new TextComponentString("TeleportBlock: FINDED!!"));
@@ -37,7 +59,7 @@ public class AnimeTeleportBlock extends BlockBase {
 				playerIn.sendMessage(new TextComponentString("TeleportBlock: None"));
 			}
 		}
-
+		*/
 		return true;
 	}
 }

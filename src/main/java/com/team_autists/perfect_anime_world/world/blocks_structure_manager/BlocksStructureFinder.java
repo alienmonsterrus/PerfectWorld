@@ -5,18 +5,20 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class BlocksStructureFinder {
 
-	private List<ExpectedBlockInfo> offsets;
+	private ArrayList<ArrayList<ExpectedBlockInfo>> offsets;
 	private World worldIn;
 	private Block relative;
+	private CoordinatesConverter coordinatesConverter;
 
-	public BlocksStructureFinder(Block relative, List<ExpectedBlockInfo> offsets, World worldIn) {
-		this.offsets = offsets;
+	public BlocksStructureFinder(Block relative, ArrayList<ExpectedBlockInfo> offsets, World worldIn) {
 		this.worldIn = worldIn;
 		this.relative = relative;
+		this.coordinatesConverter = new CoordinatesConverter();
+		this.offsets = coordinatesConverter.getCoordinates(offsets);
 	}
 
 	public boolean findStructure(BlockPos centerBlock) {
@@ -25,16 +27,26 @@ public class BlocksStructureFinder {
 			return false;
 		}
 
-		for (ExpectedBlockInfo blockInfo : offsets) {
-			BlockPos offset = blockInfo.getBlockOffset();
+		boolean finded;
 
-			Block block = getBlock(centerBlock, offset);
+		for (ArrayList<ExpectedBlockInfo> list : offsets) {
 
-			if (blockInfo.getBlock() != block) {
-				return false;
+			finded = true;
+
+			for (ExpectedBlockInfo blockInfo : list) {
+				BlockPos offset = blockInfo.getBlockOffset();
+
+				Block block = getBlock(centerBlock, offset);
+
+				if (blockInfo.getBlock() != block) {
+					finded = false;
+				}
 			}
+
+			if (finded)
+				return true;
 		}
-		return true;
+		return false;
 	}
 
 	private Block getBlock(BlockPos relative, BlockPos offset) {

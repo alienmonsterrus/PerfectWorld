@@ -1,6 +1,6 @@
 {
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "perfect_anime_world:items/anime_iron_pickaxe"
-  }
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "perfect_anime_world:items/anime_iron_pickaxe"
+	}
 }

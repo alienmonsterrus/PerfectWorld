@@ -5,7 +5,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.util.math.BlockPos;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ThreeInRowBlockStructureFinder extends BlocksStructureFinder {
 
@@ -15,8 +14,8 @@ public class ThreeInRowBlockStructureFinder extends BlocksStructureFinder {
 		super(BlockRegister.ANIME_TELEPORT_BLOCK, getExpectedBlockInfo(), Minecraft.getMinecraft().world);
 	}
 
-	private static List<ExpectedBlockInfo> getExpectedBlockInfo() {
-		List<ExpectedBlockInfo> blocks = new ArrayList<ExpectedBlockInfo>();
+	private static ArrayList<ExpectedBlockInfo> getExpectedBlockInfo() {
+		ArrayList<ExpectedBlockInfo> blocks = new ArrayList<>();
 		blocks.add(new ExpectedBlockInfo(BlockRegister.ANIME_TELEPORT_BLOCK, new BlockPos(0, 1, 0)));
 		blocks.add(new ExpectedBlockInfo(BlockRegister.ANIME_TELEPORT_BLOCK, new BlockPos(0, 2, 0)));
 		blocks.add(new ExpectedBlockInfo(BlockRegister.ANIME_TELEPORT_BLOCK, new BlockPos(1, 0, 0)));
