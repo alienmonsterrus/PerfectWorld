@@ -2,7 +2,8 @@ package com.team_autists.perfect_anime_world.blocks;
 
 import com.team_autists.perfect_anime_world.world.blocks_structure_manager.BlockNeighborsFinder;
 import com.team_autists.perfect_anime_world.world.blocks_structure_manager.ExpectedBlockInfo;
-import com.team_autists.perfect_anime_world.world.blocks_structure_manager.ThreeInRowBlockStructureFinder;
+import com.team_autists.perfect_anime_world.world.structures.PortalStructureFinder;
+import com.team_autists.perfect_anime_world.world.structures.ThreeInRowBlockStructureFinder;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -33,20 +34,33 @@ public class AnimeTeleportBlock extends BlockBase {
 			return true;
 		}
 		*/
-		
+
 		if (!worldIn.isRemote) {
 			ArrayList<ExpectedBlockInfo> blocks = BlockNeighborsFinder.Find(worldIn, pos, BlockRegister.ANIME_TELEPORT_BLOCK);
 
+			boolean trashFlagFinded = false;
+			boolean portalFlagFinded = false;
+
 			for (ExpectedBlockInfo block : blocks) {
-				boolean finded = ThreeInRowBlockStructureFinder.
+				boolean trashFinded = ThreeInRowBlockStructureFinder.
+						getInstance().findStructure(block.getBlockOffset());
+				boolean portalFinded = PortalStructureFinder.
 						getInstance().findStructure(block.getBlockOffset());
 
-				if (finded) {
-					playerIn.sendMessage(new TextComponentString("Structure is finded"));
-					break;
-				}
+				if (trashFinded)
+					trashFlagFinded = true;
+
+				if (portalFinded)
+					portalFlagFinded = true;
 			}
 
+			if (trashFlagFinded)
+				if (!portalFlagFinded)
+					playerIn.sendMessage(new TextComponentString("Trash Structure is finded"));
+
+			if (portalFlagFinded)
+				playerIn.sendMessage(new TextComponentString("Portal Structure is finded"));
+			
 			playerIn.sendMessage(new TextComponentString("Count: " + String.valueOf(blocks.size())));
 
 		}

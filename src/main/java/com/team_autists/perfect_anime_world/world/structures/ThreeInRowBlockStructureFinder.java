@@ -1,6 +1,8 @@
-package com.team_autists.perfect_anime_world.world.blocks_structure_manager;
+package com.team_autists.perfect_anime_world.world.structures;
 
 import com.team_autists.perfect_anime_world.blocks.BlockRegister;
+import com.team_autists.perfect_anime_world.world.blocks_structure_manager.BlocksStructureFinder;
+import com.team_autists.perfect_anime_world.world.blocks_structure_manager.ExpectedBlockInfo;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.math.BlockPos;
 
