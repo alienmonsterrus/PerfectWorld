@@ -23,6 +23,7 @@ public class PortalStructureFinder extends BlocksStructureFinder {
 		blocks.addAll(getRectangleWithOffset(0));
 		blocks.addAll(getRectangleWithOffset(1));
 		blocks.addAll(getRectangleWithOffset(2));
+		blocks.addAll(getRectangleWithOffset(3));
 
 		return blocks;
 	}

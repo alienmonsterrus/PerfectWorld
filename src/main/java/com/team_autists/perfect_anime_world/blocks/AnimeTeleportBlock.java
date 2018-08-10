@@ -2,6 +2,7 @@ package com.team_autists.perfect_anime_world.blocks;
 
 import com.team_autists.perfect_anime_world.world.blocks_structure_manager.BlockNeighborsFinder;
 import com.team_autists.perfect_anime_world.world.blocks_structure_manager.ExpectedBlockInfo;
+import com.team_autists.perfect_anime_world.world.structures.AnimeWorkbenchStructureFinder;
 import com.team_autists.perfect_anime_world.world.structures.PortalStructureFinder;
 import com.team_autists.perfect_anime_world.world.structures.ThreeInRowBlockStructureFinder;
 import net.minecraft.block.SoundType;
@@ -40,6 +41,14 @@ public class AnimeTeleportBlock extends BlockBase {
 
 			boolean trashFlagFinded = false;
 			boolean portalFlagFinded = false;
+
+			for (ExpectedBlockInfo block: blocks){
+				AnimeWorkbenchStructureFinder finder = new AnimeWorkbenchStructureFinder();
+				boolean isFinded = finder.findStructure(block.getBlockOffset());
+				if(isFinded){
+					playerIn.sendMessage(new TextComponentString("Workbench structure was found"));
+				}
+			}
 
 			for (ExpectedBlockInfo block : blocks) {
 				boolean trashFinded = ThreeInRowBlockStructureFinder.

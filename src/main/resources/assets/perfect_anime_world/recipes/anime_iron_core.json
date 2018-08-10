@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DID",
+    "IRI",
+    "DID"
+  ],
+  "key": {
+    "I": {
+      "item": "perfect_anime_world:anime_iron_ingot"
+    },
+    "R": {
+      "item": "minecraft:redstone_block"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "perfect_anime_world:anime_iron_core",
+    "count": 1
+  }
+}

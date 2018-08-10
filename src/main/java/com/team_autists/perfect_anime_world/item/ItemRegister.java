@@ -16,13 +16,10 @@ public class ItemRegister {
 	public static final List<Item> ITEMS = new ArrayList<>();
 
 	public static final Item.ToolMaterial TOOL_ANIME_IRON = EnumHelper.addToolMaterial("tool anime iron", 2, 512, 6.0F, 2F, 5);
-
 	public static final UselessItem USELESS_ITEM = new UselessItem("useless_item");
-
 	public static final AnimeIronIngot ANIME_IRON_INGOT = new AnimeIronIngot("anime_iron_ingot");
-
+	public static final AnimeIronCore ANIME_IRON_CORE = new AnimeIronCore("anime_iron_core");
 	public static final AnimeIronPickaxe ANIME_IRON_PICKAXE = new AnimeIronPickaxe("anime_iron_pickaxe", TOOL_ANIME_IRON);
-
 	public static final AnimeIronShovel ANIME_SHOVEL = new AnimeIronShovel("anime_iron_shovel", TOOL_ANIME_IRON);
 
 	public static void register() {

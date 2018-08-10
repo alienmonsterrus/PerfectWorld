@@ -10,6 +10,7 @@ public class CraftingRegister {
 		registerRecipes("useless_item");
 		registerRecipes("anime_iron_pickaxe");
 		registerRecipes("anime_iron_shovel");
+		registerRecipes("anime_iron_core");
 	}
 
 	private static void registerRecipes(String name) {
