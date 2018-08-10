@@ -9,6 +9,7 @@ public class CraftingRegister {
 	public static void register() {
 		registerRecipes("useless_item");
 		registerRecipes("anime_iron_pickaxe");
+		registerRecipes("anime_iron_shovel");
 	}
 
 	private static void registerRecipes(String name) {

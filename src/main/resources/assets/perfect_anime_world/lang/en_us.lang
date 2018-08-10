@@ -5,4 +5,6 @@ tile.anime_grass.name=Anime Grass
 tile.anime_iron_ore.name=Anime Iron Ore
 tile.anime_teleport_block.name=Anime Teleport Block
 item.useless_item.name=Useless Item (Really)
-item.anime_iron_ingot=AnimeIron Ingot
+item.anime_iron_ingot=Anime Iron Ingot
+item.anime_iron_pickaxe.name=Anime Iron Pickaxe
+item.anime_iron_shovel.name=Anime Iron Shovel
