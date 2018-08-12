@@ -16,9 +16,9 @@ public class WorldGenIronOre extends WorldGenBase {
 	private final WorldGenMinable oreGenOverworld;
 
 	public WorldGenIronOre() {
-		super(40);
+		super(4);
 
-		oreGenOverworld = new WorldGenMinable(BlockRegister.ANIME_IRON_ORE.getDefaultState(), 20,
+		oreGenOverworld = new WorldGenMinable(BlockRegister.ANIME_IRON_ORE.getDefaultState(), 7,
 				BlockMatcher.forBlock(Blocks.STONE));
 
 	}

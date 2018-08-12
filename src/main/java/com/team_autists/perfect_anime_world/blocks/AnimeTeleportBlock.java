@@ -1,5 +1,6 @@
 package com.team_autists.perfect_anime_world.blocks;
 
+import com.team_autists.perfect_anime_world.commands.Teleport;
 import com.team_autists.perfect_anime_world.world.blocks_structure_manager.BlockNeighborsFinder;
 import com.team_autists.perfect_anime_world.world.blocks_structure_manager.ExpectedBlockInfo;
 import com.team_autists.perfect_anime_world.world.structures.AnimeWorkbenchStructureFinder;
@@ -67,10 +68,11 @@ public class AnimeTeleportBlock extends BlockBase {
 				if (!portalFlagFinded)
 					playerIn.sendMessage(new TextComponentString("Trash Structure is finded"));
 
-			if (portalFlagFinded)
+			if (portalFlagFinded) {
 				playerIn.sendMessage(new TextComponentString("Portal Structure is finded"));
-			
-			playerIn.sendMessage(new TextComponentString("Count: " + String.valueOf(blocks.size())));
+				Teleport.teleportToDimension(playerIn, 2, playerIn.getPosition().getX(), playerIn.getPosition().getY(), playerIn.getPosition().getZ());
+			}
+				playerIn.sendMessage(new TextComponentString("Count: " + String.valueOf(blocks.size())));
 
 		}
 

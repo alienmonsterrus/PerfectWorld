@@ -11,6 +11,7 @@ public class CraftingRegister {
 		registerRecipes("anime_iron_pickaxe");
 		registerRecipes("anime_iron_shovel");
 		registerRecipes("anime_iron_core");
+		registerRecipes("anime_epic_sword");
 	}
 
 	private static void registerRecipes(String name) {
