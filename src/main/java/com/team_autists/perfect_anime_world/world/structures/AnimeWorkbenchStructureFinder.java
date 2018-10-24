@@ -22,5 +22,4 @@ public class AnimeWorkbenchStructureFinder extends BlocksStructureFinder {
         blocks.add(new ExpectedBlockInfo(BlockRegister.ANIME_TELEPORT_BLOCK, new BlockPos(1,0,-4)));
         return blocks;
     }
-
 }

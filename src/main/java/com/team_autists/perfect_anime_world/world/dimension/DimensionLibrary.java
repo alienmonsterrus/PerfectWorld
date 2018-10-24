@@ -5,6 +5,7 @@ import net.minecraft.world.DimensionType;
 import net.minecraft.world.WorldProvider;
 import net.minecraft.world.biome.BiomeProviderSingle;
 import net.minecraft.world.gen.ChunkGeneratorFlat;
+import net.minecraft.world.gen.ChunkGeneratorOverworld;
 import net.minecraft.world.gen.IChunkGenerator;
 
 public class DimensionLibrary extends WorldProvider {
@@ -25,7 +26,7 @@ public class DimensionLibrary extends WorldProvider {
 
     @Override
     public IChunkGenerator createChunkGenerator() {
-        return new ChunkGeneratorFlat(world, world.getSeed(), true,
+        return new ChunkGeneratorOverworld(world, world.getSeed(), true,
 				"village");
     }
 

@@ -9,14 +9,14 @@ public class OverworldFlatBiome extends Biome {
 
 		topBlock = BlockRegister.ANIME_GRASS.getDefaultState();
 		fillerBlock = BlockRegister.ANIME_STONE.getDefaultState();
-		decorator.treesPerChunk = 5;
+		decorator.treesPerChunk = 2;
 		decorator.decorating = true;
 		decorator.generateFalls = true;
 	}
 
 	private static BiomeProperties getProperties() {
-		BiomeProperties properties = new BiomeProperties("OverWorld Flat").setRainDisabled()
-				.setHeightVariation(1.1f).setBaseHeight(75).setTemperature(1f).setWaterColor(10711680);
+		BiomeProperties properties = new BiomeProperties("Anime OverWorld Flat").setRainDisabled()
+				.setHeightVariation(1.2f).setBaseHeight(0.95f).setTemperature(1f).setWaterColor(10711680);
 		return properties;
 	}
 }
